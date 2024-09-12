@@ -1,5 +1,6 @@
 package com.example.testeapi.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,8 +16,8 @@ import lombok.Setter;
 public class TesteApiUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
+
     private String gender;
     private String name;
     private String city;
@@ -24,7 +25,6 @@ public class TesteApiUser {
     private String country;
     private String email;
     private String username;
-    //private String password; Utilizei como teste deixei aqui para teste
     private String dateOfBirth;
     private int age;
     private int ageRegistred;

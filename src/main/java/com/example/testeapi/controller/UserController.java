@@ -34,7 +34,6 @@ public class UserController {
         user.setCountry(userJson.getJSONObject("location").getString("country"));
         user.setEmail(userJson.getString("email"));
         user.setUsername(userJson.getJSONObject("login").getString("username"));
-        //user.setPassword(userJson.getString("password")); Essa informação aqui eu ocultei pois não preciso saber a senha do usuário.
         user.setDateOfBirth(userJson.getJSONObject("dob").getString("date").split("T")[0]);
         user.setAge(userJson.getJSONObject("dob").getInt("age"));
         user.setAgeRegistred(userJson.getJSONObject("registered").getInt("age"));
